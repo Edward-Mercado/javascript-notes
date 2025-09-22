@@ -16,4 +16,4 @@ function honest_days_work(P, B, D) {
     return (bottlecaps_profit + leftover_paint);
 }
 
-console.log(honest_days_work(15, 3, 10));
+console.log(honest_days_work(14, 3, 10));
