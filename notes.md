@@ -13,6 +13,7 @@ let g = true
 
 int = integer
 let g = 1
+1 and 0 are the same as true and false
 
 float = non whole numbers
 let g = 1.2
@@ -43,3 +44,9 @@ function add(x, y) {
 
 return to set the output, you can also set a variable to this output
 or you can just make it do random stuff
+
+conditionals --------------------------
+
+= assignment
+== evaluation (no data types)
+=== evaluation (data types included)
