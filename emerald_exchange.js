@@ -19,9 +19,16 @@ function emerald_purchaser(emerald_count, emeralds) {
     formatted_emeralds = getTupleEmeralds(emerald_count, emeralds);
 
     for(let i=0; i< emerald_count; i++) {
-        starting_emerald = formatted_emeralds[i];
-        console.log(formatted_emeralds[i][1]);
-        
+        let starting_emerald = formatted_emeralds[i];
+        let good_emeralds = [];
+
+        for(let l=0; i<emerald_count;l++) {
+            target_emerald = formatted_emeralds[l];
+            console.log(target_emerald[1]);
+            
+        }
+
+        console.log(good_emeralds);
     }
 }
 
