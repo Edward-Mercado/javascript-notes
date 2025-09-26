@@ -1,10 +1,3 @@
-/*
-each emerald has a weight between 1 and 100 (int)
-there is a set of N emeralds of different sizes
-do not touch or buy odd numbered weights
-largest total weights
-*/
-
 function getTupleEmeralds(emerald_count, emeralds) {
     let formatted_emeralds = [];
     for(let i=0; i<emerald_count;i++) {
@@ -54,7 +47,7 @@ function purchaseEmeralds(emerald_count, emeralds) {
     console.log(`Pick the emerald that weighs ${optimal_emerald} first. This will get you a sum of ${max_sum}.`)
 }
 
-let emeralds = [2, 3, 4, 5, 5, 6, 1, 2, 2, 2, 1, 8, 2]
-let emerald_count = emeralds.length
+let emeralds = [2, 3, 4, 5, 5, 6, 1, 2, 2, 2, 1, 8, 2];
+let emerald_count = emeralds.length;
 
-purchaseEmeralds(emerald_count, emeralds)
+purchaseEmeralds(emerald_count, emeralds);
