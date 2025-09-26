@@ -43,11 +43,11 @@ function purchaseEmeralds(emerald_count, emeralds) {
         }
     }
     
-    optimal_emerald = emeralds[possible_sums.indexOf(max_sum)];
+    let optimal_emerald = emeralds[possible_sums.indexOf(max_sum)];
     console.log(`Pick the emerald that weighs ${optimal_emerald} first. This will get you a sum of ${max_sum}.`)
 }
 
-let emeralds = [2, 3, 4, 5, 5, 6, 1, 2, 2, 2, 1, 8, 2];
+let emeralds = [18, 7, 16, 10, 14, 17, 16, 11, 4, 15, 4, 16, 8, 8, 1];
 let emerald_count = emeralds.length;
 
 purchaseEmeralds(emerald_count, emeralds);
