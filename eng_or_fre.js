@@ -21,13 +21,10 @@ function english_or_french(line_count, text) {
     }
     else {
         console.log("French");
-        if (t_count === s_count) {
-            console.log("probably?");
-        }
     }
 }
 
-text = [];
+text = ["", "", ""];
 line_count = text.length();
 
-english_or_french(3, ["Lorsque j'avais six ans j'ai vu, une fois,","une magnifique image,", "dans un livre"]);
+english_or_french(line_count, text);
