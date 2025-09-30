@@ -25,6 +25,6 @@ function english_or_french(line_count, text) {
 }
 
 text = ["", "", ""];
-line_count = text.length();
+line_count = text.length;
 
 english_or_french(line_count, text);
