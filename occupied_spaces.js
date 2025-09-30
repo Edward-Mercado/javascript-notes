@@ -10,7 +10,7 @@ function occupy_parking(N, parking_spaces) {
     console.log(double_occupied_spaces);
 }
 
-let parking_spaces = ["C..C.", ".CC.C"]
+let parking_spaces = ["C..C.", ".CC.C"];
 let N = parking_spaces[0].length;
 
-occupy_parking(N, parking_spaces)
+occupy_parking(N, parking_spaces);
