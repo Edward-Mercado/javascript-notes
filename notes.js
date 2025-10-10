@@ -9,3 +9,4 @@ button.addEventListener("click", function(event) {
     console.log(event.target); */
     box.style.backgroundColor = "red";
 }); // this allows the button to pick up on stuff
+

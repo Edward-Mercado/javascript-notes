@@ -51,3 +51,8 @@ conditionals --------------------------
 == evaluation (no data types)
 === evaluation (data types included)
 
+
+
+-----------------------------------
+
+you can do event.target.closest or something
