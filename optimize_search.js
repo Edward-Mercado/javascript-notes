@@ -135,7 +135,6 @@ function findDNS(address, records) {
     let mid = (low+high)/2
     while(true) {
         mid = Math.ceil((low+high)/2);
-
         if (records[mid].address === address) {
             console.log(records[mid].dns);
             break;
