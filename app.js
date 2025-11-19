@@ -1,5 +1,1 @@
-let letters = ["A", "B", "C", "D", "E"]
-
-letters.forEach((letter) => {
-    console.log(letter);
-})
+console.log(Number (19.990002.toFixed(2)));
