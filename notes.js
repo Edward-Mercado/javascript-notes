@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-
-// address it with how you would in cs
+// address it with how you would in css
 const button = document.querySelector(".btn");
 console.log(button);
 
@@ -11,5 +9,3 @@ button.addEventListener("click", function(event) {
     box.style.backgroundColor = "red";
 }); // this allows the button to pick up on stuff
 
-=======
->>>>>>> ad033e91bae5543198f20f5e1d83dd5b7533bc5a
