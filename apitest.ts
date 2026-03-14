@@ -10,7 +10,7 @@ async function callAPI() {
     let resulting:Array<any> = []
 
     try {
-        const response:Response = await fetch(`https://data.cityofnewyork.us/api/v3/views/uip8-fykc/query.json`,
+        const response:Response = await fetch(`https://data.cityofnewyork.us/api/v3/views/yjub-udmw/query.json`,
             {headers: {
                 "X-App-Token": appToken,
                 "Accept": "application/json"
