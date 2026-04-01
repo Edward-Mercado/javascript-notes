@@ -43,6 +43,7 @@ function createReceipt() {
 
     console.log("                 YOUR RECEIPT                ")
     console.log("---------------------------------------------")
+    console.log(" ")
 
     sushiCart.forEach((item) => {
         console.log(`${item.name} ($${item.price.toFixed(2)}) x ${item.qt} - $${(item.qt * item.price).toFixed(2)}`)
@@ -56,6 +57,7 @@ function createReceipt() {
 
     console.log("---------------------------------------------")
 
+    console.log(" ")
     console.log(`             Order Total: $${orderTotal.toFixed(2)}`)
     console.log("")
     console.log("")
