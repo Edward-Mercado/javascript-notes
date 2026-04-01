@@ -6,7 +6,7 @@ interface departmentTemplate {
 }
 
 interface flexibleObject {
-  [key: string]: string
+  [key: string]: string[]
 }
 
 const departments: departmentTemplate = {
@@ -24,14 +24,12 @@ function findDepartment(inputDoctor: string) {
   entries.forEach(([dept, doctors]) => {
     (doctors as string[]).forEach((doctor) => {
       if (staff[doctor]) {
-        staff[doctor] += `, ${dept as string}`
+        staff[doctor].push(dept as string)
       } else {
-        staff[doctor] = dept as string
+        staff[doctor] = [dept as string]
       }
     })
   })
   
   return staff[inputDoctor]
 }
-
-console.log(findDepartment("Frank"))
