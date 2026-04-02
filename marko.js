@@ -10,22 +10,20 @@ const t9 = {
   };
 
 function marko(N, words, S) {
-    let validWords = 0
+    let incorrect = 0
 
-    words.forEach((word, index) => {
-        let bad = false;
-
-        [...word].forEach((char) => {
-            if (!t9[S[index]].includes(char)) {
-                bad = true
-            }
-        }) 
-
-        if(!bad) {
-            validWords++
+    const vWords = words.filter((word) => word.length = S.length)
+    vWords.forEach((word) => {
+        for(let i=0;i<word.length;i++) {
+            if([...(t9[S[i]])].includes([...word][i])) {
+                continue;
+            } else {
+                incorrect++; 
+                break
+            }       
         }
     })
-    console.log(validWords)
+    console.log(vWords.length - incorrect)
 }
 
 marko(3, ['mono', 'nomo', 'npo'], '6666')
