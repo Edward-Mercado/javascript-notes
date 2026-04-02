@@ -11,16 +11,11 @@ const t9 = {
 
 function marko(N, words, S) {
     let incorrect = 0
-
     const vWords = words.filter((word) => word.length = S.length)
     vWords.forEach((word) => {
         for(let i=0;i<word.length;i++) {
-            if([...(t9[S[i]])].includes([...word][i])) {
-                continue;
-            } else {
-                incorrect++; 
-                break
-            }       
+            if([...(t9[S[i]])].includes([...word][i])) { continue } 
+            else { incorrect++; break }       
         }
     })
     console.log(vWords.length - incorrect)
