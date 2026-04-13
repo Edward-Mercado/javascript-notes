@@ -9,16 +9,27 @@ const t9 = {
     9: "wxyz",
   };
 
+function reverseMap(object) {
+    let outputMap = {}
+    Object.keys(object).forEach((key) => {
+        [...object[key]].forEach((letter) => {
+            outputMap[letter] = key
+        })
+    })
+    return outputMap
+}   
+
 function marko(N, words, S) {
+    let outputMap = reverseMap(t9)
     let incorrect = 0
-    const vWords = words.filter((word) => word.length = S.length)
+    const vWords = words.filter((word) => word.length === S.length)
     vWords.forEach((word) => {
         for(let i=0;i<word.length;i++) {
-            if([...(t9[S[i]])].includes([...word][i])) { continue } 
-            else { incorrect++; break }       
+            if(outputMap[[...word][i]] === S[i]) { continue } 
+            else { incorrect++; break }
         }
     })
     console.log(vWords.length - incorrect)
 }
 
-marko(3, ['mono', 'nomo', 'npo'], '6666')
+marko(3, ['mono', 'nomo', 'npo', 'mm'], '6666')
