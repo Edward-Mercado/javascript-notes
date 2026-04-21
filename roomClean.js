@@ -1,4 +1,4 @@
-function roomCleaning(n, room) {
+function ogRoomCleaning(n, room) {
     room.sort((a, b) => a[1] - b[1])
     for(let i=0;i<n-1;i++) {
         if(room[i][room[i][0]] > room[i+1][1]) { 
@@ -19,15 +19,23 @@ let room = [
     [3, 1, 2, 5],
 ]
 
-/* 
- lines 9-10 are largely unnecessary and solve a 
- specific error i fear exists with sort
+function roomCleaning(n, room) {
+    let allSorted = true
+    room.forEach((box) => {
+        box.shift()
+        for(let i=1;i<box.length;i++) if(box[i-1] > box[i]) allSorted = false
+    })
+    if(!allSorted) return "NO"
 
- basically if the first index values are the same and the sort doesnt work without that conditional
- you are unsure if you could align it differently and fix it
+    let outputList = room[0]
+    room.shift()
 
- for example, in the data i created, if you put the first array first, then it doesnt work
- but you could put the second array first instead and fix it
-*/
+    room.forEach((box) => {
+        if(outputList[0] >= box[box.length-1]) box.reverse().forEach((el) => outputList.unshift(el))
+        else if (outputList[outputList.length-1] <= outputList[0]) box.forEach((el) => outputList.push(el)) 
+        else return "NO"
+    })
+    return "YES"
+}
 
 console.log(roomCleaning(room.length, room))
