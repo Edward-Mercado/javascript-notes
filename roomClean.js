@@ -1,14 +1,11 @@
 function roomCleaning(n, room) {
     room.sort((a, b) => a[1] - b[1])
-
-    for(let i=0;i<room.length-1;i++) {
-        if(room[i][-1] > room[i+1][1]) { 
-            if(room[i][1] !== (room[i][1])) { 
+    for(let i=0;i<n-1;i++) {
+        if(room[i][room[i][0]] > room[i+1][1]) { 
+            if(room[i][1] !== (room[i+1][1])) { 
                 return "NO" 
-            } else if (room[i+1][-1] > room[i][1]) { 
-                let swapValue = room[i]
-                room[i] = room[i+1]
-                room[i+1] = swapValue
+            } else if (room[i+1][room[i+1][0]] > room[i][1]) { 
+                [room[i], room[i+1]] = [room[i+1], room[i]]
                 return "NO"
             }
         }
@@ -17,13 +14,13 @@ function roomCleaning(n, room) {
 }
 
 let room = [
-    [3, 1, 2, 3],
-    [1, 1],
     [3, 7, 7, 7],
+    [1, 1],
+    [3, 1, 2, 5],
 ]
 
 /* 
- lines 9-11 are largely unnecessary and solve a 
+ lines 9-10 are largely unnecessary and solve a 
  specific error i fear exists with sort
 
  basically if the first index values are the same and the sort doesnt work without that conditional
@@ -33,4 +30,4 @@ let room = [
  but you could put the second array first instead and fix it
 */
 
-console.log(roomCleaning(3, room))
+console.log(roomCleaning(room.length, room))
