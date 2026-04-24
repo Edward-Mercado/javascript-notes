@@ -14,7 +14,7 @@ function ogRoomCleaning(n, room) {
 }
 
 let room = [
-    [3, 7, 7, 7],
+    [3, 7, 7, 6],
     [1, 1],
     [3, 1, 2, 5],
 ]
@@ -31,8 +31,8 @@ function roomCleaning(n, room) {
     room.shift()
 
     room.forEach((box) => {
-        if(outputList[0] >= box[box.length-1]) box.reverse().forEach((el) => outputList.unshift(el))
-        else if (outputList[outputList.length-1] <= outputList[0]) box.forEach((el) => outputList.push(el)) 
+        if(outputList[0] >= box[box.length-1]) outputList.unshift(box[0])
+        else if (outputList[outputList.length-1] <= box[0]) outputList.push(box[box.length-1])
         else return "NO"
     })
     return "YES"
