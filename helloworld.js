@@ -78,4 +78,4 @@ function HelloWorld(func, args) {
     }
 }
 
-HelloWorld("random character")
+HelloWorld("print")
