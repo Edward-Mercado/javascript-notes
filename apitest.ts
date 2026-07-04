@@ -1,40 +1,17 @@
-const appToken:string = "Mwhk5kNMKOYt39UGW3qdvlSRa"
-
-interface ApiResponse {
-    results: any[]
+async function getAPIshit() {
+    let quote = await fetch('https://thequoteshub.com/api/random-quote')
+    .then(async (response) => {
+        let quoteJSON = await response.json()
+        console.log(quoteJSON)
+    })
 }
 
-async function callAPI() {
-    let isLoading:boolean = true
-    let errorMessage:string = ""
-    let resulting:Array<any> = []
-
-    try {
-        const response:Response = await fetch(`https://data.cityofnewyork.us/api/v3/views/yjub-udmw/query.json`,
-            {headers: {
-                "X-App-Token": appToken,
-                "Accept": "application/json"
-            }}
-        )
-
-        if(!response.ok) {
-            throw new Error(`Request failed with status ${response.status}`)
-        }
-
-        const data:ApiResponse = await response.json()
-        resulting = Array.isArray(data) ? data : []
-
-    } catch (error) {
-        errorMessage = error instanceof Error ? error.message : "Failed to load API"
-        resulting = []
-        
-    } finally {
-        isLoading = false
-        console.log(errorMessage)
-        for(let i=0;i<4;i++) {
-            console.log(resulting[i])
-        }
-    }
+async function getMoreAPIshit() {
+    let quote = await fetch('https://random-word-api.herokuapp.com/word?number=42&lang=de')
+    .then(async (response) => {
+        let quoteJSON = await response.json()
+        console.log(quoteJSON)
+    })
 }
 
-callAPI()
+getMoreAPIshit()
