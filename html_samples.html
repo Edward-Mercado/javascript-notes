@@ -1,0 +1,158 @@
+1---
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Page</title>
+</head>
+
+<body>
+    <h1>Welcome</h1>
+</body>
+
+</html>
+
+2----
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-1">
+</head>
+
+<body>
+    <p>Hello world </p>
+</body>
+
+</html>
+
+3--- 
+
+<style>
+.card {
+  color: blue;
+  background-color: white;
+}
+
+#card {
+  color: red;
+}
+</style> the id selector will win as ids are more specific than classes
+
+4---
+
+<p style="color: green;">Text A</p>
+
+<style>
+p { color: blue; }
+</style>
+
+<link rel="stylesheet" href="styles.css"> green wins, the green selector is more specific to the actual p element rather than imported styles
+
+5---
+
+<header class="header">
+  <nav class="nav">
+    <div class="navitem"><a href="#">Home</a></div>
+    <div class="navitem"><a href="#">About</a></div>
+  </nav>
+</header>
+<article class="main-content">
+  <div class="post">My Article</div>
+</article>
+<footer class="footer">© 2026</footer>
+
+6-----
+
+<form>
+  <label for="name">Name:</label> <input type="text" name="name">
+  <br>
+  <label for="email">Email:</label> <input type="text" name="email">
+  <br>
+  <input type="submit">
+</form>
+
+7------
+
+<img src="chart.png" alt="chart">
+<img src="spacer.gif" alt="spacer image">
+
+8-------
+
+<video width="400" controls>
+  <source src="https://movie.mp4" type="video/mp4">
+</video>
+
+<a href="www.example.com">Visit us</a>
+
+9--------
+
+<style>
+.box {
+  width: 300px;
+  padding: 20px;
+  border: 5px solid black;
+  margin: 10px;
+}
+</style> it does include padding and border, so the .box wont fit
+
+10------
+
+<style>
+  body { background-color: #eeeeee; color: #000000; }
+  .btn { background: #cccccc; color: #000000; }
+</style>
+
+<p>Please read this important notice carefully.</p>
+<button class="btn">Submit</button>
+<img src="warning.png" alt="a warning">
+
+2!-----
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <p>Hello world </p>
+</body>
+
+</html>
+
+6!-----
+
+<form>
+  <label for="name">Name:</label> <input type="text" id="name" name="name">
+  <br>
+  <label for="email">Email:</label> <input type="text" id="email" name="email">
+  <br>
+  <input type="submit">
+</form>
+
+7!-----
+
+<img src="chart.png" alt="chart">
+<img src="spacer.gif" alt="">
+
+8!------
+
+<video width="400" controls>
+  <source src="movie.mp4" type="video/mp4">
+</video>
+
+<a href="https://www.example.com">Visit us</a>
+
+9!--------
+
+<style>
+.box {
+  width: 300px;
+  padding: 20px;
+  border: 5px solid black;
+  margin: 10px;
+  box-sizing: border-box
+}
+</style> it does not include padding and border, so it wont fit
