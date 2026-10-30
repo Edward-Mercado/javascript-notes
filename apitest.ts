@@ -1,19 +1,11 @@
-async function getAPIshit() {
-    let quote = await fetch('https://thequoteshub.com/api/random-quote')
-    .then(async (response) => {
-        let quoteJSON = await response.json()
-        console.log(quoteJSON.text)
-        console.log(" ")
-        console.log(quoteJSON.author)
-    })
-}
+async function testDjangoAPI() {
+    try {
+    await fetch(`http://127.0.0.1:8000/api/register/`, {
+        method: "POST",
+        
+    });
 
-async function getMoreAPIshit() {
-    let quote = await fetch('https://random-word-api.herokuapp.com/word?number=42&lang=en')
-    .then(async (response) => {
-        let quoteJSON = await response.json()
-        console.log(quoteJSON)
-    })
+    } catch (error: any) {
+        console.error(error)
+    }
 }
-
-getMoreAPIshit()
